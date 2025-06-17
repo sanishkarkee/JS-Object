@@ -51,12 +51,36 @@ console.log('<< ---------- LEARNING OBJECT ( zero to Advanced ) ---------- >>');
 // console.log(person);
 
 // ----------CREATING OBJECT: using FACTORY FUNCTION
-function createUser(name, age) {
-  return {
-    name,
-    age,
-  };
-}
-const user1 = createUser('Sanish', 35);
-const user2 = createUser('Puskar', 56);
-console.log(user1, user2);
+// function createUser(name, age) {
+//   return {
+//     name,
+//     age,
+//   };
+// }
+// const user1 = createUser('Sanish', 35);
+// const user2 = createUser('Puskar', 56);
+// console.log(user1, user2);
+
+// ---------- OBJECT METHODS
+let profile = {
+  name: 'Tapas',
+  company: 'CreoWis',
+  message: function () {
+    console.log(`${this.name} works at ${this.company}`);
+  },
+  address: {
+    city: 'Bangalore',
+    pin: 563032,
+    state: 'Karnataka',
+    country: 'India',
+    greeting: function () {
+      console.log('Welcome to India');
+    },
+  },
+};
+
+profile.message();
+console.log(profile.name);
+console.log(profile.company);
+console.log(profile.address.country);
+profile.address.greeting();
