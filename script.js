@@ -79,8 +79,22 @@ let profile = {
   },
 };
 
-profile.message();
-console.log(profile.name);
-console.log(profile.company);
-console.log(profile.address.country);
-profile.address.greeting();
+// profile.message();
+// console.log(profile.name);
+// console.log(profile.company);
+// console.log(profile.address.country);
+// profile.address.greeting();
+
+// ---------- Check if a property(Key) exists in an OBJECT
+// console.log('Salary' in profile); // False
+// console.log('greeting' in profile); //  False
+// console.log('greeting' in profile.address); //  True
+
+// ---------- For..in loop: If you want to work with all the properties of an Object
+for (let key in profile) {
+  console.log(key); // name, company, message, address
+  console.log(profile[key]); // tapas, crewOis, [Function: message] ,  { city: 'Bangalore', pin: 563032, state: 'Karnataka', country: 'India', greeting: [Function: greeting] }
+}
+
+// If you want to get keys in ARRAY
+console.log(Object.keys(profile));
